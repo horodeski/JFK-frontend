@@ -4,47 +4,56 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>JFK pacotes turísticos</title>
+		<link rel="stylesheet" href="./assets/styles.css" />
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
+			<img class="logo" src="./assets/company-logo.png" alt="Logo da empresa JFK pacotes turísticos" />
 			<nav>
-				<img class="logo" alt="Logo da empresa JFK pacotes turísticos" />
-				<div>
-					<ul>
-						<!-- ícones das redes sociais -->
-						<li>
-							<i></i>
-						</li>
-						<li>
-							<i></i>
-						</li>
-						<li>
-							<i></i>
-						</li>
-					</ul>
-					<button><i></i></button>
-					<button>Cadastrar</button>
+				<ul>
+					<li>
+						<i class="bx bxl-facebook-square"></i>
+					</li>
+					<li>
+						<i class="bx bxl-instagram-alt"></i>
+					</li>
+					<li>
+						<i class="bx bxl-linkedin-square"></i>
+					</li>
+				</ul>
+				<div class="buttons">
+					<button class="button default"><i class="bx bx-cart"></i></button>
+					<button class="button primary">Cadastrar</button>
 				</div>
 			</nav>
 		</header>
 		<main>
 			<!-- HeroSection -->
-			<section>
-				<div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis vel risus id semper</p>
-					<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis vel risus id semper</h1>
-					<button>
-						<span>Lorem ipsum</span>
+			<section class="hero-section">
+				<div class="content">
+					<p>Pacotes exclusivos para os principais destinos nacionais e internacionais.</p>
+					<h1>Descubra os melhores destinos com preços que cabem no seu bolso</h1>
+					<button class="button primary">
+						<span>Quero viajar</span>
 						<i></i>
 					</button>
 				</div>
-				<button>
-					<i></i>
+				<button class="button-cursor">
+					<i class="bx bx-mouse bx-fade-down"></i>
 				</button>
-				<div class="carousel">
-					<img src="" alt="Fachada moderna do Hotel Curitiba Center com luzes à noite" />
-					<img src="" alt="Quarto confortável do Hotel Curitiba Central com cama king size" />
-					<img src="" alt="Piscina do hotel com vista panorâmica da cidade de Curitiba" />
+
+				<div class="carousel-vertical">
+					<div class="carousel-track">
+						<img src="https://picsum.photos/id/1018/400/700" alt="Hotel 1" />
+						<img src="https://picsum.photos/id/1015/400/700" alt="Hotel 2" />
+						<img src="https://picsum.photos/id/1016/400/700" alt="Hotel 3" />
+					</div>
+
+					<div class="carousel-controls">
+						<button id="prevV"><i class="bx bx-chevron-left"></i></button>
+						<button id="nextV"><i class="bx bx-chevron-right"></i></button>
+					</div>
 				</div>
 			</section>
 			<!-- Seção de pesquisa -->
@@ -80,5 +89,27 @@
 				</div>
 			</section>
 		</main>
+		<script>
+			const track = document.querySelector(".carousel-track");
+			const prevV = document.getElementById("prevV");
+			const nextV = document.getElementById("nextV");
+
+			let index = 0;
+
+			function updateCarousel() {
+				const offset = -index * 420; // largura do card + margin-right
+				track.style.transform = `translateX(${offset}px)`;
+			}
+
+			nextV.addEventListener("click", () => {
+				index = (index + 1) % track.children.length;
+				updateCarousel();
+			});
+
+			prevV.addEventListener("click", () => {
+				index = (index - 1 + track.children.length) % track.children.length;
+				updateCarousel();
+			});
+		</script>
 	</body>
 </html>

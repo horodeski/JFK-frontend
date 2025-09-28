@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Inter", sans-serif;
+	color: #2f2f2f;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	border-radius: 8px;
+	align-items: center;
+    width: fit-content;
+}
+
+.button.default {
+	padding: 0.6vw;
+	background-color: #37d67f77;
+}
+
+.button.primary {
+	padding: 1.6vh 1.8vw;
+	background-color: #5469f1;
+	color: white;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+body {
+	padding: 2vw;
+}
+
+header {
+	padding: 2vw;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	width: -webkit-fill-available;
+	justify-content: space-between;
+}
+
+header nav {
+	gap: 1.2vw;
+}
+
+header nav,
+nav ul,
+header nav .buttons {
+	display: flex;
+	align-items: center;
+}
+
+nav i {
+	font-size: 2em;
+}
+
+header nav .buttons {
+	gap: 0.5vw;
+}
+
+header nav ul {
+	list-style: none;
+	gap: 0.7vw;
+}
+
+.logo {
+	width: 4vw;
+	height: fit-content;
+}
+
+.hero-section {
+	background-color: #83838314;
+	padding: 1vw;
+	border-radius: 33px;
+	height: 80vh;
+	display: flex;
+	position: relative;
+	margin-top: 10vh;
+    justify-content: space-between;
+	align-items: center;
+}
+
+.hero-section .content {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	gap: 5vh;
+}
+
+.button-cursor {
+	position: absolute;
+	bottom: 4vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.button-cursor i {
+	font-size: 2vw;
+}
+.carousel-vertical {
+	position: relative;
+    width: 41vw;
+    height: 100%;
+	overflow: hidden;
+	border-radius: 12px;
+}
+
+.carousel-track {
+	display: flex;
+	transition: transform 0.6s ease-in-out;
+}
+
+.carousel-track img {
+	width: 400px;
+	height: 700px;
+	object-fit: cover;
+	margin-right: 20px;
+	border-radius: 10px;
+}
+
+.carousel-controls {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 20px;
+}
+
+.carousel-controls button {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px;
+	font-size: 22px;
+	border-radius: 50%;
+	cursor: pointer;
+}
