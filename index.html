@@ -31,33 +31,31 @@
 		<main>
 			<!-- HeroSection -->
 			<section class="hero-section">
-				<div class="content">
-					<p>Pacotes exclusivos para os principais destinos nacionais e internacionais.</p>
-					<h1>Descubra os melhores destinos com preços que cabem no seu bolso</h1>
-					<button class="button primary">
-						<span>Quero viajar</span>
-						<i></i>
-					</button>
+				<div class="container"></div>
+				<div class="carousel-wrapper">
+					<div class="content">
+						<h1>Descubra os melhores destinos com preços que cabem no seu bolso</h1>
+						<p>Pacotes exclusivos para os principais destinos nacionais e internacionais.</p>
+						<button class="button primary">
+							<span>Quero viajar</span>
+							<i></i>
+						</button>
+					</div>
+					<div class="carousel-control">
+						<button class="carousel-control-button">
+							<i class="bx bx-left-arrow-alt"></i>
+						</button>
+						<button class="carousel-control-button">
+							<i class="bx bx-right-arrow-alt"></i>
+						</button>
+					</div>
 				</div>
 				<button class="button-cursor">
 					<i class="bx bx-mouse bx-fade-down"></i>
 				</button>
-
-				<div class="carousel-vertical">
-					<div class="carousel-track">
-						<img src="https://picsum.photos/id/1018/400/700" alt="Hotel 1" />
-						<img src="https://picsum.photos/id/1015/400/700" alt="Hotel 2" />
-						<img src="https://picsum.photos/id/1016/400/700" alt="Hotel 3" />
-					</div>
-
-					<div class="carousel-controls">
-						<button id="prevV"><i class="bx bx-chevron-left"></i></button>
-						<button id="nextV"><i class="bx bx-chevron-right"></i></button>
-					</div>
-				</div>
 			</section>
 			<!-- Seção de pesquisa -->
-			<section>
+			<section class="search-section">
 				<div>
 					<div>
 						<h2>Lorem ipsum dolor sit amet, consectetur</h2>
@@ -66,11 +64,14 @@
 					<div>
 						<form action="">
 							<input type="text" />
-							<button><span>Pesquisar</span></button>
+							<button class="button primary"><span>Pesquisar</span></button>
 						</form>
 					</div>
 				</div>
-				<div>
+				<div class="cards-list">
+					<article class="card">
+						<button>Ver mais</button>
+					</article>
 					<article class="card">
 						<button>Ver mais</button>
 					</article>
@@ -89,27 +90,5 @@
 				</div>
 			</section>
 		</main>
-		<script>
-			const track = document.querySelector(".carousel-track");
-			const prevV = document.getElementById("prevV");
-			const nextV = document.getElementById("nextV");
-
-			let index = 0;
-
-			function updateCarousel() {
-				const offset = -index * 420; // largura do card + margin-right
-				track.style.transform = `translateX(${offset}px)`;
-			}
-
-			nextV.addEventListener("click", () => {
-				index = (index + 1) % track.children.length;
-				updateCarousel();
-			});
-
-			prevV.addEventListener("click", () => {
-				index = (index - 1 + track.children.length) % track.children.length;
-				updateCarousel();
-			});
-		</script>
 	</body>
 </html>
