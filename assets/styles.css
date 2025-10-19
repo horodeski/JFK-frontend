@@ -7,11 +7,17 @@
 	color: #2f2f2f;
 }
 
-.button {
+h2 {
+	font-size: 2.8em;
+}
+
+button {
 	display: flex;
 	justify-content: center;
-	border-radius: 33px;
 	align-items: center;
+	border: none;
+	background-color: transparent;
+	border-radius: 7px;
 	width: fit-content;
 }
 
@@ -20,11 +26,14 @@
 }
 
 .button.default {
-	padding: 0.6vw;
-	background-color: #4edb59;
+	padding: 0.35vw;
+	background: #141417;
+	color: white;
+	border: 2px solid transparent;
 }
 
 .button.white {
+	border: 2px solid transparent;
 	padding: 1.5vh 1.8vw;
 	font-size: 1em;
 	font-weight: 600;
@@ -37,14 +46,20 @@
 }
 
 .button.primary {
-	padding: 1.6vh 1.8vw;
-	background-color: #334df7;
+	background: linear-gradient(142.51deg, #fc641e 8.65%, #ee7631 88.82%) border-box;
+	border: 2px solid transparent;
+	padding: 10px 40px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: all 0.3s;
 	color: white;
+	font-size: 18px;
+	font-weight: 500;
 }
 
-button {
-	border: none;
-	background-color: transparent;
+.button.primary:hover {
+	box-shadow: none;
+	opacity: 80%;
 }
 
 body {
@@ -164,60 +179,16 @@ header nav ul {
 	font-size: 2vw;
 }
 
-.carousel-vertical {
-	position: relative;
-	width: 45vw;
-	overflow: hidden;
-	border-radius: 12px;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.carousel-track {
-	display: flex;
-	transition: transform 0.6s ease-in-out;
-}
-
-.carousel-track img {
-	width: 500px;
-	height: 700px;
-	object-fit: cover;
-	margin-right: 20px;
-}
-
-.carousel-track img:last-child {
-	margin-right: 0;
-}
 
 .carousel-controls {
 	position: absolute;
-	bottom: 15px;
-	left: 50%;
-	transform: translateX(-50%);
+	bottom: 40px;
 	display: flex;
 	gap: 20px;
 }
 
-.carousel-controls button {
-	background: rgba(0, 0, 0, 0.5);
-	color: white;
-	border: none;
-	padding: 10px;
-	font-size: 22px;
-	border-radius: 50%;
-	cursor: pointer;
-}
-
 .search-section {
 	padding: 1vw;
-}
-
-.search-section input {
-	width: 100%;
-	background-color: #8989890f;
-	border: none;
-	padding: 10px;
-	border-radius: 19px;
 }
 
 .search-section form {
@@ -226,17 +197,124 @@ header nav ul {
 	margin-top: 3vh;
 }
 
-.card {
-	background-color: #d7deff;
-    width: 29.7vw;
-    height: 40vh;
-	border-radius: 10px;
-}
-
 .cards-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	gap: 2vw;
 	margin-top: 5vh;
+}
+
+.group {
+	display: flex;
+	line-height: 28px;
+	align-items: center;
+	position: relative;
+	width: 100%;
+}
+
+.input {
+	width: 100%;
+	height: 40px;
+	line-height: 28px;
+	padding: 0 1rem;
+	padding-left: 2.5rem;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	outline: none;
+	background-color: #f3f3f4;
+	color: #0d0c22;
+	transition: 0.3s ease;
+}
+
+.input::placeholder {
+	color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+	outline: none;
+	border-color: #0f1730;
+	background-color: #fff;
+	box-shadow: 0 0 0 4px rgba(11, 52, 235, 0.1);
+}
+
+.icon {
+	position: absolute;
+	left: 1rem;
+	fill: #9e9ea7;
+	width: 1rem;
+	height: 1rem;
+}
+
+.card {
+	margin: auto;
+	width: min(300px, 100%);
+	background-color: #fefefe;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	color: #141417;
+}
+.card__hero {
+	background: url(https://media.staticontent.com/media/pictures/ea42c274-7263-43b7-bc2b-390e62612bfd/300x200)
+		no-repeat;
+	border-radius: 0.5rem 0.5rem 0 0;
+	padding: 1.5rem;
+	height: 147px;
+	font-size: 0.875rem;
+}
+
+.card__hero-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1rem;
+	font-weight: 700;
+}
+.card__footer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: start;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 0.75rem;
+	row-gap: 1rem;
+	font-weight: 700;
+	font-size: 0.875rem;
+}
+@media (min-width: 340px) {
+	.card__footer {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+}
+.card__job-summary {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 0.75rem;
+}
+.card__btn {
+	width: 100%;
+	font-weight: 400;
+	border: none;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	padding: 0.5rem 1.25rem;
+	border-radius: 1rem;
+	background-color: #141417;
+	color: #fff;
+	font-size: 1rem;
+}
+@media (min-width: 340px) {
+	.card__btn {
+		width: max-content;
+	}
 }
