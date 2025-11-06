@@ -1,0 +1,186 @@
+.photos-section img:nth-child(1) {
+	width: 60%;
+	margin-right: 0.5vw;
+	border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
+}
+
+.photos-section img:nth-child(2) {
+	width: 40%;
+}
+
+.photos-section {
+	margin-top: 2vh;
+	display: flex;
+	justify-content: center;
+}
+
+main {
+	padding-inline: 2vw;
+}
+
+.product {
+	display: flex;
+	gap: 2vw;
+}
+
+main h1 {
+	margin: 2vh 0;
+}
+
+.reviews {
+	width: 489px;
+}
+
+.media .value {
+    font-size: 2.5em;
+    font-weight: bold;
+    background-color: #fc641e;
+    width: 70px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.media {
+	margin-top: 2vh;
+	display: flex;
+	align-items: flex-end;
+}
+
+.media span {
+	font-weight: 600;
+	font-size: 2em;
+	margin-left: 1vw;
+}
+
+.reviews h3 {
+	margin: 2vh 0;
+}
+
+.review img {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+
+.review .user {
+	display: flex;
+	align-items: center;
+	gap: 0.5vw;
+	margin-bottom: 1vh;
+}
+
+.reviews .list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.5vh;
+}
+
+.see-more {
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.topics .item i {
+	font-size: 1.6em;
+	margin-right: 1vw;
+}
+
+.topics .item {
+	display: flex;
+	width: 48%;
+	align-items: center;
+}
+
+.topics {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1vw;
+	margin: 3vh 0;
+}
+
+.product .data {
+	width: min-content;
+}
+
+.product .data  h2 {
+	margin: 3vh 0;
+}
+
+.check-date {
+	display: flex;
+	gap: 1vw;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5vh;
+	width: 100%;
+}
+
+.field label {
+	color: rgb(53, 53, 53);
+	font-size: .9em;
+}
+
+.room-options .search {
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+}
+
+.room-options {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2vh;
+}
+
+.guests-and-rooms {
+	display: flex;
+	gap: 1vw;
+}
+
+.spinner button {
+	padding: 1vh 1.5vw;
+	background-color: #fc641e3d;
+	color: #fc641e;
+	font-weight: 900;
+}
+
+.spinner {
+	display: flex;
+	gap: .5vw;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2vh;
+	margin-top: 4vh;
+}
+
+.cards .card {
+	width: 32%;
+}
+
+.cards .card img {
+	width: 100%;
+}
+
+.cards .card .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1vh 0;
+
+}
+
+.cards .card .button {
+	margin-top: 2vh;
+}
