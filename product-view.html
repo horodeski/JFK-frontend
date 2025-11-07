@@ -10,20 +10,39 @@
 	</head>
 	<body>
 		<header>
+			<div class="alert">
+				<p>Ofertas imperdíveis para você viajar mais!</p>
+				<div>
+					<a href="/login.html">Login</a>
+					<a href="/register.html">Cadastrar</a>
+				</div>
+			</div>
 			<img class="logo" src="./assets/company-logo.png" alt="Logo da empresa JFK pacotes turísticos" />
 			<nav>
 				<ul>
-					<li><i class="bx bxl-facebook-square"></i></li>
-					<li><i class="bx bxl-instagram-alt"></i></li>
-					<li><i class="bx bxl-linkedin-square"></i></li>
+					<li>
+						<i class="bx bxl-facebook-square"></i>
+					</li>
+					<li>
+						<i class="bx bxl-instagram-alt"></i>
+					</li>
+					<li>
+						<i class="bx bxl-linkedin-square"></i>
+					</li>
 				</ul>
-				<div class="buttons">
-					<button class="button default"><i class="bx bx-cart"></i></button>
-					<button class="button primary">Cadastrar</button>
+				<div class="cart-button">
+					<button id="openCart" class="button default"><i class="bx bx-cart"></i></button>
+					<span id="cartCount" class="cart-count">0</span>
 				</div>
 			</nav>
 		</header>
-
+		<div class="cart-modal" id="cartModal">
+			<div class="cart-content">
+				<button class="close-cart" id="closeCart"><i class="bx bx-x"></i></button>
+				<h2>Seu carrinho</h2>
+				<p>Atualmente, não há produtos no carrinho. Continue navegando e adicione pacotes de viagem!</p>
+			</div>
+		</div>
 		<main>
 			<a href="/index.html">
 				<i class="bx bx-left-arrow-alt"></i>
@@ -303,11 +322,133 @@
 								adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
 							</span>
 						</div>
-
 						<span class="see-more">Ver mais avaliações</span>
 					</div>
 				</div>
 			</div>
 		</main>
+		<script>
+			const cartModal = document.getElementById("cartModal");
+			const openCart = document.getElementById("openCart");
+			const closeCart = document.getElementById("closeCart");
+			const cartContent = cartModal.querySelector(".cart-content");
+			const cartCount = document.getElementById("cartCount");
+
+			function updateCartCount() {
+				const items = getCartItems();
+				cartCount.textContent = items.length;
+			}
+
+			openCart.addEventListener("click", () => {
+				updateCartUI();
+				cartModal.classList.add("active");
+			});
+
+			closeCart.addEventListener("click", () => {
+				cartModal.classList.remove("active");
+			});
+
+			cartModal.addEventListener("click", (e) => {
+				if (e.target === cartModal) {
+					cartModal.classList.remove("active");
+				}
+			});
+
+			function getCartItems() {
+				return JSON.parse(localStorage.getItem("cartItems")) || [];
+			}
+
+			function saveCartItems(items) {
+				localStorage.setItem("cartItems", JSON.stringify(items));
+			}
+
+			function addToCart(item) {
+				const cartItems = getCartItems();
+				cartItems.push(item);
+				saveCartItems(cartItems);
+				updateCartCount();
+			}
+
+			function clearCart() {
+				localStorage.removeItem("cartItems");
+				updateCartUI();
+				updateCartCount();
+			}
+
+			function updateCartUI() {
+				const cartItems = getCartItems();
+				const hasItems = cartItems.length > 0;
+
+				cartContent.innerHTML = `
+			<button class="close-cart" id="closeCart"><i class="bx bx-x"></i></button>
+			<h2>Seu carrinho</h2>
+			${
+				hasItems
+					? `
+				<ul class="cart-list">
+					${cartItems
+						.map(
+							(item, index) => `
+							<li>
+								<div>
+									<strong>${item.name}</strong>
+									<span>${item.price}</span>
+								</div>
+								<button class="remove-item" data-index="${index}">
+									<i class='bx bx-trash-alt'></i>
+								</button>
+							</li>`
+						)
+						.join("")}
+				</ul>
+				<div>
+					<div class="cart-total">
+						<strong>Total:</strong>
+						<span>
+							R$ ${cartItems.reduce((total, item) => total + parseFloat(item.price.replace("R$ ", "").replace(",", ".")), 0).toFixed(2)}
+						</span>
+					</div>
+					<div class="cart-actions">
+						<button class="button primary"><a href="/payment-details.html">Finalizar compra</a></button>
+						<button class="button default" id="clearCart">
+							<i class='bx bx-trash-alt'></i>
+						</button>
+					</div>
+				</div>
+			`
+					: `
+				<p>Atualmente, não há produtos no carrinho. Continue navegando e adicione pacotes de viagem!</p>
+			`
+			}
+		`;
+
+				document.getElementById("closeCart").addEventListener("click", () => {
+					cartModal.classList.remove("active");
+				});
+
+				const clearBtn = document.getElementById("clearCart");
+				if (clearBtn) clearBtn.addEventListener("click", clearCart);
+
+				document.querySelectorAll(".remove-item").forEach((btn) => {
+					btn.addEventListener("click", (e) => {
+						const index = e.target.dataset.index;
+						const cartItems = getCartItems();
+						cartItems.splice(index, 1);
+						saveCartItems(cartItems);
+						updateCartUI();
+					});
+				});
+				updateCartCount();
+			}
+
+			document.querySelectorAll(".room-options .card").forEach((card) => {
+				const button = card.querySelector("button");
+				button.addEventListener("click", () => {
+					const name = card.querySelector("h4").textContent;
+					const price = card.querySelector("strong").textContent;
+					addToCart({ name, price });
+				});
+			});
+		</script>
 	</body>
 </html>

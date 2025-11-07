@@ -1,0 +1,125 @@
+main {
+	display: flex;
+	gap: 3vw;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+main section {
+    width: 33%;
+}
+
+.package-details  {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.package-details img {
+    width: 100%;
+    margin: 2vh 0;
+    border-radius: 10px;
+}
+
+.payment-info {
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.media .value {
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #fc641e;
+    width: 20px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.media {
+	margin-top: 2vh;
+	display: flex;
+	align-items: center;
+}
+
+.media span {
+	font-weight: 600;
+	font-size: 1em;
+	margin-left: .5vw;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.form h1 {
+    margin-bottom: 4vh;
+}
+
+.form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.group {
+    display: flex;
+    gap: 2vw;
+}
+
+button {
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.buy-summary {
+    width: 100%;
+}
+
+.buy-summary h1 {
+    margin-bottom: 4vh;
+}
+
+.buy-summary .card {
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.details h3 {
+    margin-bottom: 2vh;
+}
+
+.details p {
+    margin: 2vh 0;
+}
+
+.buy-summary .card img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.buy-summary .card .left {
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 1vw;
+    margin-top: 5vh;
+}

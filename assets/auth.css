@@ -1,0 +1,62 @@
+main {
+	display: flex;
+	margin: 0 !important;
+    height: 100vh;
+}
+
+body {
+	padding: 0 !important;
+}
+
+.image {
+    background-image: url('https://plus.unsplash.com/premium_photo-1669058431700-ffef02ad6cd2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687');
+    background-size: cover;
+    width: 66%;
+    background-position: center;
+    filter: brightness(0.5);
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+.login {
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35vw;
+}
+
+.logo {
+    margin-bottom: 4vh;
+}
+
+h2 {
+    margin-bottom: 6vh;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+    gap: 1vh;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+button {
+    width: 100%;
+}
+
+p {
+    margin-top: 1vh;
+    text-align: center;
+}
+
+.register .logo {
+    margin-bottom: 7vh;
+}
