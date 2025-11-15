@@ -61,7 +61,7 @@ function updateCartUI() {
             <span>R$ ${cartItems.reduce((total, item) => total + parseFloat(item.price.replace("R$", "").replace(",", ".")), 0).toFixed(2)}</span>
           </div>
           <div class="cart-actions">
-            <button class="button primary"><a href="/payment-details.html">Finalizar compra</a></button>
+            <button class="button primary"><a href="/login.html">Finalizar compra</a></button>
             <button class="button default" id="clearCart"><i class='bx bx-trash-alt'></i></button>
           </div>
         </div>`

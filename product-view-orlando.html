@@ -1,112 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JFK Pacote Orlando - Disney</title>
-  <link rel="stylesheet" href="./assets/global.css" />
-  <link rel="stylesheet" href="./assets/product.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
-<body>
-  <header>
-    <div class="alert">
-      <p>Disney, diversão e compras com preços especiais!</p>
-      <div>
-        <a href="/login.html">Login</a>
-        <a href="/register.html">Cadastrar</a>
-      </div>
-    </div>
-    <img class="logo" src="./assets/company-logo.png" alt="Logo da empresa JFK pacotes turísticos" />
-    <nav>
-      <ul>
-        <li><i class="bx bxl-facebook-square"></i></li>
-        <li><i class="bx bxl-instagram-alt"></i></li>
-        <li><i class="bx bxl-linkedin-square"></i></li>
-      </ul>
-      <div class="cart-button">
-        <button id="openCart" class="button default"><i class="bx bx-cart"></i></button>
-        <span id="cartCount" class="cart-count">0</span>
-      </div>
-    </nav>
-  </header>
-  <div class="cart-modal" id="cartModal">
-    <div class="cart-content">
-      <button class="close-cart" id="closeCart"><i class="bx bx-x"></i></button>
-      <h2>Seu carrinho</h2>
-      <p>Atualmente, não há produtos no carrinho. Continue navegando e adicione pacotes de viagem!</p>
-    </div>
-  </div>
-  <main>
-    <a href="/index.html">
-      <i class="bx bx-left-arrow-alt"></i>
-      <span>Voltar para a home</span>
-    </a>
-    <div class="photos-section">
-      <img src="https://imgs.search.brave.com/W2CvIaN3LUV9vDw_WrMQjpePcPt4dET9w9EewhQwrr8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE1/NTU4NjQ2My9waG90/by9vcmxhbmRvLXN1/bnNldC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9Wm1WZ3ox/SEZLRno3NVNoM2ZJ/b0p0eWhYcGtLeFRu/UmhOeng3RzNUaHE3/WT0" alt="Parques de Orlando" />
-      <img src="https://imgs.search.brave.com/3enBipcaYYP7H8q_7bnSOgDVwsJG1xvtXCjmlcICxVc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDU4/MzI5ODU5L2VzL2Zv/dG8vdW5pdmVyc2Fs/LXN0dWRpb3Mtb3Js/YW5kby5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9Ti1tMm9w/amR3eHJwSjZYd2pE/Q3dGTEstbWZ2ajlh/dGlRVDlna1Y2UlFG/ND0" alt="Disney Orlando" />
-    </div>
-    <span class="see-more">Ver mais fotos</span>
-    <h1>Pacote Orlando (EUA)</h1>
-    <div class="product">
-      <div class="data">
-        <p>Pacote completo para aproveitar os parques da Disney, momentos de compras nos principais outlets e estadia com todo conforto. Inclui aéreo internacional, hotel parceiro Disney e ingressos para os principais parques temáticos.</p>
-        <div class="topics">
-          <div class="item"><i class="bx bxs-like"></i><span>Cancelamento gratuito até 15 dias antes</span></div>
-          <div class="item"><i class="bx bxs-credit-card"></i><span>Parcelamento em até 15x sem juros</span></div>
-          <div class="item"><i class="bx bxs-plane-alt"></i><span>Aéreo internacional incluso</span></div>
-          <div class="item"><i class="bx bxs-hotel"></i><span>Hotel parceiro Disney</span></div>
-          <div class="item"><i class="bx bxs-store"></i><span>Ingressos para 4 parques temáticos</span></div>
-          <div class="item"><i class="bx bx-shopping-bag"></i><span>Dia de compras nos outlets</span></div>
-          <div class="item"><i class="bx bx-wifi"></i><span>Wi-Fi gratuito</span></div>
-          <div class="item"><i class="bx bxs-car"></i><span>Translado aeroporto-hotel-aeroporto</span></div>
-          <div class="item"><i class="bx bxs-first-aid"></i><span>Seguro viagem internacional</span></div>
-        </div>
-        <h2>Opções de quarto</h2>
-        <div class="room-options">
-          <div class="search">
-            <div class="check-date">
-              <div class="field"><label for="checkin">Check-in</label><input type="date" id="checkin" class="input" /></div>
-              <div class="field"><label for="checkout">Check-out</label><input type="date" id="checkout" class="input" /></div>
-            </div>
-            <div class="guests-and-rooms">
-              <div class="field"><label for="adults">Adultos</label><div class="spinner"><input type="text" id="adults" class="input" /><button>-</button><button>+</button></div></div>
-              <div class="field"><label for="children">Crianças</label><div class="spinner"><input type="text" id="children" class="input" /><button>-</button><button>+</button></div></div>
-              <div class="field"><label for="rooms">Quartos</label><div class="spinner"><input type="text" id="rooms" class="input" /><button>-</button><button>+</button></div></div>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="card">
-              <img src="./assets/orlando-suite.jpg" alt="Suíte Família Disney" />
-              <div class="header"><h4>Suíte Família Disney</h4><strong>R$ 4.300,00</strong></div>
-              <div><div><i class="bx bx-check"></i><span>Dois ambientes e cozinha equipada</span></div><div><i class="bx bx-check"></i><span>Serviço de traslado para os parques</span></div><div><i class="bx bx-check"></i><span>Wi-Fi e mini bar grátis</span></div></div>
-              <button class="button default">Reservar agora</button>
-            </div>
-            <div class="card">
-              <img src="./assets/orlando-padrao.jpg" alt="Quarto Standard Hotel Disney" />
-              <div class="header"><h4>Standard Disney</h4><strong>R$ 3.450,00</strong></div>
-              <div><div><i class="bx bx-check"></i><span>Café da manhã incluso</span></div><div><i class="bx bx-check"></i><span>Facilidade de acesso aos parques</span></div><div><i class="bx bx-check"></i><span>Serviço de quarto</span></div></div>
-              <button class="button default">Reservar agora</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reviews">
-        <h2>Avaliações</h2>
-        <div class="media"><div class="value">95%</div><span>de satisfação dos clientes</span></div>
-        <h3>Principais avaliações</h3>
-        <div class="list">
-          <div class="review">
-            <div class="user"><img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" /><div><div><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><strong>Sandra Q.</strong></div></div><span>Disney foi o sonho da família, atendimento excelente e tudo perfeito!</span>
-          </div>
-          <div class="review">
-            <div class="user"><img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" /><div><div><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><strong>Rodrigo B.</strong></div></div><span>Ótima localização, ingressos inclusos e muito conforto. Voltaremos!</span>
-          </div>
-          <span class="see-more">Ver mais avaliações</span>
-        </div>
-      </div>
-    </div>
-  </main>
-  <script src="./assets/product.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JFK Pacote Orlando - Disney</title>
+		<link rel="stylesheet" href="./assets/global.css" />
+		<link rel="stylesheet" href="./assets/product.css" />
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="alert">
+				<p>Disney, diversão e compras com preços especiais!</p>
+				<div>
+					<a href="/login.html">Login</a>
+					<a href="/register.html">Cadastrar</a>
+				</div>
+			</div>
+			<img class="logo" src="./assets/company-logo.png" alt="Logo da empresa JFK pacotes turísticos" />
+			<nav>
+				<ul>
+					<li><i class="bx bxl-facebook-square"></i></li>
+					<li><i class="bx bxl-instagram-alt"></i></li>
+					<li><i class="bx bxl-linkedin-square"></i></li>
+				</ul>
+				<div class="cart-button">
+					<button id="openCart" class="button default"><i class="bx bx-cart"></i></button>
+					<span id="cartCount" class="cart-count">0</span>
+				</div>
+			</nav>
+		</header>
+		<div class="cart-modal" id="cartModal">
+			<div class="cart-content">
+				<button class="close-cart" id="closeCart"><i class="bx bx-x"></i></button>
+				<h2>Seu carrinho</h2>
+				<p>Atualmente, não há produtos no carrinho. Continue navegando e adicione pacotes de viagem!</p>
+			</div>
+		</div>
+		<main>
+			<a href="/index.html">
+				<i class="bx bx-left-arrow-alt"></i>
+				<span>Voltar para a home</span>
+			</a>
+			<div class="photos-section">
+				<img
+					src="https://imgs.search.brave.com/W2CvIaN3LUV9vDw_WrMQjpePcPt4dET9w9EewhQwrr8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE1/NTU4NjQ2My9waG90/by9vcmxhbmRvLXN1/bnNldC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9Wm1WZ3ox/SEZLRno3NVNoM2ZJ/b0p0eWhYcGtLeFRu/UmhOeng3RzNUaHE3/WT0"
+					alt="Parques de Orlando" />
+				<img
+					src="https://imgs.search.brave.com/3enBipcaYYP7H8q_7bnSOgDVwsJG1xvtXCjmlcICxVc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDU4/MzI5ODU5L2VzL2Zv/dG8vdW5pdmVyc2Fs/LXN0dWRpb3Mtb3Js/YW5kby5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9Ti1tMm9w/amR3eHJwSjZYd2pE/Q3dGTEstbWZ2ajlh/dGlRVDlna1Y2UlFG/ND0"
+					alt="Disney Orlando" />
+			</div>
+			<span class="see-more">Ver mais fotos</span>
+			<h1>Pacote Orlando (EUA)</h1>
+			<div class="product">
+				<div class="data">
+					<p>
+						Pacote completo para aproveitar os parques da Disney, momentos de compras nos principais outlets e estadia com todo conforto.
+						Inclui aéreo internacional, hotel parceiro Disney e ingressos para os principais parques temáticos.
+					</p>
+					<div class="topics">
+						<div class="item">
+							<i class="bx bxs-like"></i>
+							<span>Cancelamento gratuito até 15 dias antes</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-credit-card"></i>
+							<span>Parcelamento em até 15x sem juros</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-plane-alt"></i>
+							<span>Aéreo internacional incluso</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-hotel"></i>
+							<span>Hotel parceiro Disney</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-store"></i>
+							<span>Ingressos para 4 parques temáticos</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-shopping-bag"></i>
+							<span>Dia de compras nos outlets</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-wifi"></i>
+							<span>Wi-Fi gratuito</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-car"></i>
+							<span>Translado aeroporto-hotel-aeroporto</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-first-aid"></i>
+							<span>Seguro viagem internacional</span>
+						</div>
+					</div>
+					<h2>Opções de quarto</h2>
+					<div class="room-options">
+						<div class="search">
+							<div class="check-date">
+								<div class="field">
+									<label for="checkin">Check-in</label>
+									<input type="date" id="checkin" class="input" />
+								</div>
+								<div class="field">
+									<label for="checkout">Check-out</label>
+									<input type="date" id="checkout" class="input" />
+								</div>
+							</div>
+							<div class="guests-and-rooms">
+								<div class="field">
+									<label for="adults">Adultos</label>
+									<div class="spinner">
+										<input type="text" id="adults" class="input" />
+										<button>-</button>
+										<button>+</button>
+									</div>
+								</div>
+								<div class="field">
+									<label for="children">Crianças</label>
+									<div class="spinner">
+										<input type="text" id="children" class="input" />
+										<button>-</button>
+										<button>+</button>
+									</div>
+								</div>
+								<div class="field">
+									<label for="rooms">Quartos</label>
+									<div class="spinner">
+										<input type="text" id="rooms" class="input" />
+										<button>-</button>
+										<button>+</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cards">
+							<div class="card">
+								<img
+									src="https://imgs.search.brave.com/TbfJsMpDHm-mQsjnR9CcD8NDo6w7znNOPnOnalDLAGo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cmV2aXN0YXNpbS5j/b20uYnIvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjEvMDMvcmV2/aXN0YVNJTV9BcnF1/aXRldHVyYV9RdWFy/dG8tZGUtaG90ZWwt/ZW0tY2FzYV9RdWFy/dG8tZXNjdXJvX0Ny/ZWRpdG9fRWR1YXJk/by1Qb3plbGxhLmpw/Zw"
+									alt="Suíte Família Disney" />
+								<div class="header">
+									<h4>Suíte Família Disney</h4>
+									<strong>R$ 4.300,00</strong>
+								</div>
+								<div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Dois ambientes e cozinha equipada</span>
+									</div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Serviço de traslado para os parques</span>
+									</div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Wi-Fi e mini bar grátis</span>
+									</div>
+								</div>
+								<button class="button default">Reservar agora</button>
+							</div>
+							<div class="card">
+								<img
+									src="https://imgs.search.brave.com/xV_m4w5cUqogU_PjYbfW7q8DECZL9kG6adkhuyrW820/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/MjE5NjI1Ni9wdC9m/b3RvL3dpZGUtc2hv/dC1vZi1hZnJpY2Fu/LWZlbWFsZS11c2lu/Zy1sYXB0b3AtaW4t/bHV4dXJ5LWhvdGVs/LXJvb20tYXQtbmln/aHQuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPURaU3lleXVK/QjhaVVZkTW1yNGFy/VV9fVW8wUDhISG1H/YmMxdXh2OFFHU0U9"
+									alt="Quarto Standard Hotel Disney" />
+								<div class="header">
+									<h4>Standard Disney</h4>
+									<strong>R$ 3.450,00</strong>
+								</div>
+								<div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Café da manhã incluso</span>
+									</div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Facilidade de acesso aos parques</span>
+									</div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Serviço de quarto</span>
+									</div>
+								</div>
+								<button class="button default">Reservar agora</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reviews">
+					<h2>Avaliações</h2>
+					<div class="media">
+						<div class="value">95%</div>
+						<span>de satisfação dos clientes</span>
+					</div>
+					<h3>Principais avaliações</h3>
+					<div class="list">
+						<div class="review">
+							<div class="user">
+								<img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" />
+								<div>
+									<div>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+									</div>
+									<strong>Sandra Q.</strong>
+								</div>
+							</div>
+							<span>Disney foi o sonho da família, atendimento excelente e tudo perfeito!</span>
+						</div>
+						<div class="review">
+							<div class="user">
+								<img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" />
+								<div>
+									<div>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+									</div>
+									<strong>Rodrigo B.</strong>
+								</div>
+							</div>
+							<span>Ótima localização, ingressos inclusos e muito conforto. Voltaremos!</span>
+						</div>
+						<span class="see-more">Ver mais avaliações</span>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./assets/product.js"></script>
+	</body>
 </html>
