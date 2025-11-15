@@ -92,13 +92,13 @@ function updateCartUI() {
 
 function createPhotoModal(photos) {
 	const oldModal = document.getElementById("photoModal");
-	
-  if (oldModal) oldModal.remove();
+
+	if (oldModal) oldModal.remove();
 
 	let current = 0;
 	const modal = document.createElement("div");
-	
-  modal.id = "photoModal";
+
+	modal.id = "photoModal";
 	modal.style.position = "fixed";
 	modal.style.top = 0;
 	modal.style.left = 0;
@@ -188,6 +188,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			"https://imgs.search.brave.com/69jL5qan0mp32wfK-M_CKK13i7lPW1uE4QPED7ILoSA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mLmku/dW9sLmNvbS5ici9m/b3RvZ3JhZmlhLzIw/MjUvMTAvMjkvMTc2/MTc2NTAzNjY5MDI2/NmFjYzFiODZfMTc2/MTc2NTAzNl8zeDJf/bWQuanBn",
 			"https://imgs.search.brave.com/U3QlEZe9KP5YvbXEdXcvwzrfdIxJMG7zwHgGgfntd6A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDk4/NDY1OTU4L3Bob3Rv/L29ybGFuZG8tZXll/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1XWHJkZ0pQQ1Rt/cTZCMDZWa2Q4enBO/Z3QwN19pWXl0TVVN/VEw4OTByVkp3PQ",
 			"https://imgs.search.brave.com/EwJ0AwugZgTHU-UQlaulKYulRrxfxP85BxRtH1r202M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vMDcvMjAxNjA3/LTAwNC1BRTQzMThF/NS9PcmxhbmRvLUZs/b3JpZGEtYWVyaWFs/LWNpdHlzY2FwZS10/b3dhcmRzLUVvbGEt/TGFrZS5qcGc"
+		],
+		lencois: [
+			"https://imgs.search.brave.com/0bMie3-D6riNYLYt7YDNxp1ETjVZ2yp_aWaVUE1aIXw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2diLmdvdi5ici9k/b2N1bWVudHMvZC9n/dWVzdC9sZW5jb2lz/X21hcmFuaGVuc2Vz/X3VuZXNjb19mb3Rv/Mi1qcGc",
+			"https://imgs.search.brave.com/oDfEuKZORxOaMBy3cnAlYas6gyAugp836sWJ-nAWSVE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/Z2VyLmdvb2dsZXVz/ZXJjb250ZW50LmNv/bS9pbWcvYi9SMjl2/WjJ4bC9BVnZYc0Vp/eGhmTVRQNnNUUjJZ/WGRBVTR4QUxXLWk2/VEdUa3YzaTRuNWpr/S2dKdGRySF9nSlFU/U3dWcWtJWVpuVWpq/MUpoOTBKbkZYVWln/Y202cDhwVmEzNVd3/QmltbXZONTNtdW9G/ZDk2UDZaaGxvUDZG/WWcyclNSbUZfTFFi/aGxyNEpOMmE0MkNv/MVU3Z1RHLU9ZeHBQ/bVlwNG9uWUhkZWsw/cU05bGphZnFiYVpr/SzNablNENUJQOHls/SHpiR1dwQS9zMTYw/MDAvMjAyMjA2MDZf/MTY1MTE0LmpwZw",
+			"https://imgs.search.brave.com/3shiCg0yXyjDM-XCoXs3GmTP0jXDhpXps1qRA1hgKbM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVsaG9yZXNkZXN0/aW5vcy5jb20uYnIv/d3AtY29udGVudC91/cGxvYWRzLzIwMTcv/MTAvbGVuY29pcy1t/YXJhbmhlbnNlcy1z/YW50by1hbWFyby5q/cGc"
 		]
 	};
 
@@ -196,9 +201,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (window.location.pathname.includes("gramado")) selected = photosDB.gramado;
 	else if (window.location.pathname.includes("noronha")) selected = photosDB.noronha;
 	else if (window.location.pathname.includes("orlando")) selected = photosDB.orlando;
+	else if (window.location.pathname.includes("lencois")) selected = photosDB.lencois;
 
 	const seeMoreEl = document.querySelector(".see-more");
-  
+
 	if (seeMoreEl && selected) {
 		seeMoreEl.style.cursor = "pointer";
 		seeMoreEl.addEventListener("click", () => createPhotoModal(selected));

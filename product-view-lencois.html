@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JFK Pacote Lençóis Maranhenses</title>
+		<link rel="stylesheet" href="./assets/global.css" />
+		<link rel="stylesheet" href="./assets/product.css" />
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="alert">
+				<p>Descubra o paraíso das lagoas e dunas em Lençóis Maranhenses!</p>
+				<div>
+					<a href="/login.html">Login</a>
+					<a href="/register.html">Cadastrar</a>
+				</div>
+			</div>
+			<img class="logo" src="./assets/company-logo.png" alt="Logo da empresa JFK pacotes turísticos" />
+			<nav>
+				<ul>
+					<li><i class="bx bxl-facebook-square"></i></li>
+					<li><i class="bx bxl-instagram-alt"></i></li>
+					<li><i class="bx bxl-linkedin-square"></i></li>
+				</ul>
+				<div class="cart-button">
+					<button id="openCart" class="button default"><i class="bx bx-cart"></i></button>
+					<span id="cartCount" class="cart-count">0</span>
+				</div>
+			</nav>
+		</header>
+		<div class="cart-modal" id="cartModal">
+			<div class="cart-content">
+				<button class="close-cart" id="closeCart"><i class="bx bx-x"></i></button>
+				<h2>Seu carrinho</h2>
+				<p>Atualmente, não há produtos no carrinho. Continue navegando e adicione pacotes de viagem!</p>
+			</div>
+		</div>
+		<main>
+			<a href="/index.html">
+				<i class="bx bx-left-arrow-alt"></i>
+				<span>Voltar para a home</span>
+			</a>
+			<div class="photos-section">
+				<img
+					src="https://imgs.search.brave.com/4k2m2AcXz_Czp7OX9I5g2VRGDL_47DV0yNqR0M80YzE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTIz/OTA1MDQ0L3B0L2Zv/dG8vbGVuJUMzJUE3/b2lzLW1hcmFuaGVu/c2VzLW5hdGlvbmFs/LXBhcmsuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPXJraV94/dFV5RGxBR0ZpWmN3/Y1piTXo0LWxoNjZB/OUxzbHZpakNRSEs3/alU9"
+					alt="Dunas Lençóis Maranhenses" />
+				<img
+					src="https://imgs.search.brave.com/SVNt9pykoVyzFS_J868AS2I4HYdYF8ukcufVBGEswq4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM3/MTE4NDMzMi9waG90/by92aWV3LWZyb20t/dGhlLWRyb25lLWRv/LXBhcmElQzMlQURz/by1sZW5jb2lzLW1h/cmFuaGVuc2VzLW5h/dGlvbmFsLXBhcmst/YnJhemlsLndlYnA_/YT0xJmI9MSZzPTYx/Mng2MTImdz0wJms9/MjAmYz1KVjVDV2tm/YTRNczd0WjVHeE9R/VEcybU95ckJYWVdZ/d2p2azVfT19HWEtn/PQ"
+					alt="Lagoas cristalinas Lençóis Maranhenses" />
+			</div>
+			<span class="see-more">Ver mais fotos</span>
+			<h1>Pacote Lençóis Maranhenses (MA)</h1>
+			<div class="product">
+				<div class="data">
+					<p>
+						Explore as paisagens exuberantes do Parque Nacional dos Lençóis Maranhenses com este pacote exclusivo. Vivencie lagoas de
+						águas cristalinas, dunas intermináveis, pôr do sol inesquecível, além de trilhas e passeios de barco pelo Rio Preguiças.
+					</p>
+					<div class="topics">
+						<div class="item">
+							<i class="bx bxs-like"></i>
+							<span>Cancelamento gratuito até 10 dias antes</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-credit-card"></i>
+							<span>Parcelamento em até 12x sem juros</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-plane-alt"></i>
+							<span>Aéreo nacional incluso</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-hotel"></i>
+							<span>Hospedagem 4 estrelas</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-store"></i>
+							<span>Passeios guiados pelo parque</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-wifi"></i>
+							<span>Wi-Fi gratuito no hotel</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-car"></i>
+							<span>Translado aeroporto-hotel-aeroporto</span>
+						</div>
+						<div class="item">
+							<i class="bx bxs-first-aid"></i>
+							<span>Suporte 24h para emergências</span>
+						</div>
+					</div>
+					<h2>Opções de quarto</h2>
+					<div class="room-options">
+						<div class="search">
+							<div class="check-date">
+								<div class="field">
+									<label for="checkin">Check-in</label>
+									<input type="date" id="checkin" class="input" />
+								</div>
+								<div class="field">
+									<label for="checkout">Check-out</label>
+									<input type="date" id="checkout" class="input" />
+								</div>
+							</div>
+							<div class="guests-and-rooms">
+								<div class="field">
+									<label for="adults">Adultos</label>
+									<div class="spinner">
+										<input type="text" id="adults" class="input" />
+										<button>-</button>
+										<button>+</button>
+									</div>
+								</div>
+								<div class="field">
+									<label for="children">Crianças</label>
+									<div class="spinner">
+										<input type="text" id="children" class="input" />
+										<button>-</button>
+										<button>+</button>
+									</div>
+								</div>
+								<div class="field">
+									<label for="rooms">Quartos</label>
+									<div class="spinner">
+										<input type="text" id="rooms" class="input" />
+										<button>-</button>
+										<button>+</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cards">
+							<div class="card">
+								<img
+									src="https://imgs.search.brave.com/xV_m4w5cUqogU_PjYbfW7q8DECZL9kG6adkhuyrW820/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/MjE5NjI1Ni9wdC9m/b3RvL3dpZGUtc2hv/dC1vZi1hZnJpY2Fu/LWZlbWFsZS11c2lu/Zy1sYXB0b3AtaW4t/bHV4dXJ5LWhvdGVs/LXJvb20tYXQtbmln/aHQuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPURaU3lleXVK/QjhaVVZkTW1yNGFy/VV9fVW8wUDhISG1H/YmMxdXh2OFFHU0U9"
+									alt="Suíte Família Lençóis" />
+								<div class="header">
+									<h4>Suíte Família Lençóis</h4>
+									<strong>R$ 4.500,00</strong>
+								</div>
+								<div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Ampla varanda e vista para as dunas</span>
+									</div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Trilha guiada exclusiva</span>
+									</div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Café da manhã incluso</span>
+									</div>
+								</div>
+								<button class="button default">Reservar agora</button>
+							</div>
+							<div class="card">
+								<img
+									src="https://imgs.search.brave.com/TbfJsMpDHm-mQsjnR9CcD8NDo6w7znNOPnOnalDLAGo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cmV2aXN0YXNpbS5j/b20uYnIvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjEvMDMvcmV2/aXN0YVNJTV9BcnF1/aXRldHVyYV9RdWFy/dG8tZGUtaG90ZWwt/ZW0tY2FzYV9RdWFy/dG8tZXNjdXJvX0Ny/ZWRpdG9fRWR1YXJk/by1Qb3plbGxhLmpw/Zw"
+									alt="Quarto Standard Lençóis" />
+								<div class="header">
+									<h4>Standard Lençóis</h4>
+									<strong>R$ 3.650,00</strong>
+								</div>
+								<div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Lagoa privativa próxima ao quarto</span>
+									</div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Passeio de barco incluso</span>
+									</div>
+									<div>
+										<i class="bx bx-check"></i>
+										<span>Wi-Fi e frigobar grátis</span>
+									</div>
+								</div>
+								<button class="button default">Reservar agora</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reviews">
+					<h2>Avaliações</h2>
+					<div class="media">
+						<div class="value">97%</div>
+						<span>de satisfação dos clientes</span>
+					</div>
+					<h3>Principais avaliações</h3>
+					<div class="list">
+						<div class="review">
+							<div class="user">
+								<img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" />
+								<div>
+									<div>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+									</div>
+									<strong>Camila Torres</strong>
+								</div>
+							</div>
+							<span>Experiência fantástica, as lagoas são maravilhosas e o atendimento impecável!</span>
+						</div>
+						<div class="review">
+							<div class="user">
+								<img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" />
+								<div>
+									<div>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+										<i class="bx bxs-star"></i>
+									</div>
+									<strong>Marcelo Lima</strong>
+								</div>
+							</div>
+							<span>Lugar incrível, passeio de barco inesquecível e muita segurança. Recomendo!</span>
+						</div>
+						<span class="see-more">Ver mais avaliações</span>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./assets/product.js"></script>
+	</body>
+</html>
