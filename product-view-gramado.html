@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFK Pacote Gramado</title>
+  <link rel="stylesheet" href="./assets/global.css" />
+  <link rel="stylesheet" href="./assets/product.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="alert">
+      <p>Promoção especial para conhecer Gramado!</p>
+      <div>
+        <a href="/login.html">Login</a>
+        <a href="/register.html">Cadastrar</a>
+      </div>
+    </div>
+    <img class="logo" src="./assets/company-logo.png" alt="Logo da empresa JFK pacotes turísticos" />
+    <nav>
+      <ul>
+        <li><i class="bx bxl-facebook-square"></i></li>
+        <li><i class="bx bxl-instagram-alt"></i></li>
+        <li><i class="bx bxl-linkedin-square"></i></li>
+      </ul>
+      <div class="cart-button">
+        <button id="openCart" class="button default"><i class="bx bx-cart"></i></button>
+        <span id="cartCount" class="cart-count">0</span>
+      </div>
+    </nav>
+  </header>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <button class="close-cart" id="closeCart"><i class="bx bx-x"></i></button>
+      <h2>Seu carrinho</h2>
+      <p>Atualmente, não há produtos no carrinho. Continue navegando e adicione pacotes de viagem!</p>
+    </div>
+  </div>
+  <main>
+    <a href="/index.html">
+      <i class="bx bx-left-arrow-alt"></i>
+      <span>Voltar para a home</span>
+    </a>
+    <div class="photos-section">
+      <img src="https://imgs.search.brave.com/HUXrpF_bhtr_buAM9hg5M_KoFV_ssxnix_bY-lbaGek/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/ODI4NjEwMi9waG90/by9vcmxhbmRvLWZs/b3JpZGEtdXNhLWRv/d250b3duLWRyb25l/LXNreWxpbmUtYWVy/aWFsLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz0yMlNfREM3/UlRiSXFCY1hRLUVt/ZXlHdDNmVzNyWmcx/ZXdUX1g1SG1rbTBF/PQ" alt="Centro de Gramado" />
+      <img src="https://imgs.search.brave.com/P95dQ3-z7t5enw0BfS1Qp7UIPQ1e8YCc7r-nKcKKCSg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTM1/NDE1MDM3L3Bob3Rv/L29ybGFuZG8tZmxv/cmlkYS1jaXR5c2Nh/cGUuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPWI3UXNKRjAy/cWtHRXZJNUZZakxP/eW94TXJUMUNTVGNo/Wk5vQkNDTVI3cXM9" alt="Paisagem Gramado" />
+    </div>
+    <span class="see-more">Ver mais fotos</span>
+    <h1>Pacote Gramado</h1>
+    <div class="product">
+      <div class="data">
+        <p>Curta o clima europeu da Serra Gaúcha! Este pacote inclui estadia acolhedora, um delicioso café colonial diário, city tour completo pelos principais pontos turísticos de Gramado e passeio ao Lago Negro.</p>
+        <div class="topics">
+          <div class="item"><i class="bx bxs-like"></i><span>Cancelamento gratuito até 7 dias antes</span></div>
+          <div class="item"><i class="bx bxs-credit-card"></i><span>Parcelamento em até 10x sem juros</span></div>
+          <div class="item"><i class="bx bxs-bus"></i><span>Transporte do aeroporto até o hotel</span></div>
+          <div class="item"><i class="bx bxs-store-alt"></i><span>Café colonial incluso</span></div>
+          <div class="item"><i class="bx bx-wifi"></i><span>Wi-Fi gratuito</span></div>
+          <div class="item"><i class="bx bxs-map"></i><span>City tour completo com guia</span></div>
+          <div class="item"><i class="bx bxs-snow"></i><span>Passeio na Snowland (opcional)</span></div>
+          <div class="item"><i class="bx bxs-first-aid"></i><span>Seguro viagem incluído</span></div>
+          <div class="item"><i class="bx bxs-hot"></i><span>Aquecedor nos quartos</span></div>
+        </div>
+        <h2>Opções de quarto</h2>
+        <div class="room-options">
+          <div class="search">
+            <div class="check-date">
+              <div class="field"><label for="checkin">Check-in</label><input type="date" id="checkin" class="input" /></div>
+              <div class="field"><label for="checkout">Check-out</label><input type="date" id="checkout" class="input" /></div>
+            </div>
+            <div class="guests-and-rooms">
+              <div class="field"><label for="adults">Adultos</label><div class="spinner"><input type="text" id="adults" class="input" /><button>-</button><button>+</button></div></div>
+              <div class="field"><label for="children">Crianças</label><div class="spinner"><input type="text" id="children" class="input" /><button>-</button><button>+</button></div></div>
+              <div class="field"><label for="rooms">Quartos</label><div class="spinner"><input type="text" id="rooms" class="input" /><button>-</button><button>+</button></div></div>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <img src="./assets/gramado-master.jpg" alt="Suíte Master Gramado" />
+              <div class="header"><h4>Suíte Master</h4><strong>R$ 2.100,00</strong></div>
+              <div><div><i class="bx bx-check"></i><span>Banheira de hidromassagem</span></div><div><i class="bx bx-check"></i><span>Café colonial no quarto</span></div><div><i class="bx bx-check"></i><span>Vista para o Lago Negro</span></div></div>
+              <button class="button default">Reservar agora</button>
+            </div>
+            <div class="card">
+              <img src="./assets/gramado-standard.jpg" alt="Quarto Standard" />
+              <div class="header"><h4>Standard Duplo</h4><strong>R$ 1.650,00</strong></div>
+              <div><div><i class="bx bx-check"></i><span>Ar-condicionado</span></div><div><i class="bx bx-check"></i><span>Aquecedor</span></div><div><i class="bx bx-check"></i><span>Serviço de quarto</span></div></div>
+              <button class="button default">Reservar agora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <h2>Avaliações</h2>
+        <div class="media"><div class="value">90%</div><span>de satisfação dos clientes</span></div>
+        <h3>Principais avaliações</h3>
+        <div class="list">
+          <div class="review">
+            <div class="user"><img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" /><div><div><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><strong>Julia S.</strong></div></div><span>Que cidade linda! Atendimento maravilhoso e o café colonial faz toda diferença.</span>
+          </div>
+          <div class="review">
+            <div class="user"><img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" /><div><div><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><strong>Roberto T.</strong></div></div><span>Passeios organizados e hotel muito confortável, super recomendo.</span>
+          </div>
+          <span class="see-more">Ver mais avaliações</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./assets/product.js"></script>
+</body>
+</html>

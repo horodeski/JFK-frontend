@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFK Pacote Fernando de Noronha</title>
+  <link rel="stylesheet" href="./assets/global.css" />
+  <link rel="stylesheet" href="./assets/product.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="alert">
+      <p>Ofertas para conhecer o paraíso de Noronha!</p>
+      <div>
+        <a href="/login.html">Login</a>
+        <a href="/register.html">Cadastrar</a>
+      </div>
+    </div>
+    <img class="logo" src="./assets/company-logo.png" alt="Logo da empresa JFK pacotes turísticos" />
+    <nav>
+      <ul>
+        <li><i class="bx bxl-facebook-square"></i></li>
+        <li><i class="bx bxl-instagram-alt"></i></li>
+        <li><i class="bx bxl-linkedin-square"></i></li>
+      </ul>
+      <div class="cart-button">
+        <button id="openCart" class="button default"><i class="bx bx-cart"></i></button>
+        <span id="cartCount" class="cart-count">0</span>
+      </div>
+    </nav>
+  </header>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <button class="close-cart" id="closeCart"><i class="bx bx-x"></i></button>
+      <h2>Seu carrinho</h2>
+      <p>Atualmente, não há produtos no carrinho. Continue navegando e adicione pacotes de viagem!</p>
+    </div>
+  </div>
+  <main>
+    <a href="/index.html">
+      <i class="bx bx-left-arrow-alt"></i>
+      <span>Voltar para a home</span>
+    </a>
+    <div class="photos-section">
+      <img src="https://imgs.search.brave.com/uVfJqXiyJk4fYJm6WFokHuJZwQiOpmL75QnZvyNc26c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtZ3JhdGlz/L3Zpc3RhLWFlcmVh/LWRhLWlsaGEtZGUt/a29oLW5hbmd5dWFu/LWVtLXN1cmF0LXRo/YW5pLXRhaWxhbmRp/YV8zMzUyMjQtMTA2/NS5qcGc_c2VtdD1h/aXNfaHlicmlkJnc9/NzQw" alt="Fernando de Noronha praia" />
+      <img src="https://imgs.search.brave.com/lQdoMTy6kja1rf4NCybsW0LX8cTLyqkbRJan0zai8UY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS1jZG4udHJpcGFk/dmlzb3IuY29tL21l/ZGlhL3Bob3RvLW8v/MDEvM2EvYjMvMmQv/ZmVybmFuZG8tZGUt/bm9yb25oYS5qcGc" alt="Fernando de Noronha trilha" />
+    </div>
+    <span class="see-more">Ver mais fotos</span>
+    <h1>Pacote Fernando de Noronha</h1>
+    <div class="product">
+      <div class="data">
+        <p>Viva dias incríveis no arquipélago mais paradisíaco do Brasil! Hospedagem em hotel 5 estrelas, passeios guiados pelas principais praias, e aéreo incluso com saída das principais capitais. Ideal para quem busca contato com a natureza, conforto e experiências únicas.</p>
+        <div class="topics">
+          <div class="item"><i class="bx bxs-like"></i><span>Cancelamento gratuito até 10 dias antes</span></div>
+          <div class="item"><i class="bx bxs-credit-card"></i><span>Parcelamento em até 12x sem juros</span></div>
+          <div class="item"><i class="bx bxs-plane-alt"></i><span>Aéreo incluso (ida e volta)</span></div>
+          <div class="item"><i class="bx bxs-hotel"></i><span>Hotel 5 estrelas com café da manhã</span></div>
+          <div class="item"><i class="bx bxs-buoy"></i><span>Passeios de barco e mergulho</span></div>
+          <div class="item"><i class="bx bx-wifi"></i><span>Wi-Fi gratuito</span></div>
+          <div class="item"><i class="bx bx-bus"></i><span>Translado incluído</span></div>
+          <div class="item"><i class="bx bxs-sun"></i><span>Trilhas ecológicas e acesso às praias</span></div>
+          <div class="item"><i class="bx bxs-first-aid"></i><span>Seguro viagem incluso</span></div>
+        </div>
+        <h2>Opções de quarto</h2>
+        <div class="room-options">
+          <div class="search">
+            <div class="check-date">
+              <div class="field"><label for="checkin">Check-in</label><input type="date" id="checkin" class="input" /></div>
+              <div class="field"><label for="checkout">Check-out</label><input type="date" id="checkout" class="input" /></div>
+            </div>
+            <div class="guests-and-rooms">
+              <div class="field"><label for="adults">Adultos</label><div class="spinner"><input type="text" id="adults" class="input" /><button>-</button><button>+</button></div></div>
+              <div class="field"><label for="children">Crianças</label><div class="spinner"><input type="text" id="children" class="input" /><button>-</button><button>+</button></div></div>
+              <div class="field"><label for="rooms">Quartos</label><div class="spinner"><input type="text" id="rooms" class="input" /><button>-</button><button>+</button></div></div>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <img src="./assets/noronha-deluxe.jpg" alt="Suíte deluxe com vista mar" />
+              <div class="header"><h4>Suíte Deluxe Vista Mar</h4><strong>R$ 2.900,00</strong></div>
+              <div><div><i class="bx bx-check"></i><span>Varanda com vista panorâmica</span></div><div><i class="bx bx-check"></i><span>Café da manhã e jantar inclusos</span></div><div><i class="bx bx-check"></i><span>Mini bar e wi-fi gratuito</span></div></div>
+              <button class="button default">Reservar agora</button>
+            </div>
+            <div class="card">
+              <img src="./assets/noronha-standard.jpg" alt="Quarto Standard" />
+              <div class="header"><h4>Standard Casal</h4><strong>R$ 2.300,00</strong></div>
+              <div><div><i class="bx bx-check"></i><span>Ar-condicionado</span></div><div><i class="bx bx-check"></i><span>Telefone e TV a cabo</span></div><div><i class="bx bx-check"></i><span>Serviço de quarto</span></div></div>
+              <button class="button default">Reservar agora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <h2>Avaliações</h2>
+        <div class="media"><div class="value">92%</div><span>de satisfação dos clientes</span></div>
+        <h3>Principais avaliações</h3>
+        <div class="list">
+          <div class="review">
+            <div class="user"><img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" /><div><div><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><strong>Maria F.</strong></div></div><span>Experiência sensacional! Hotel maravilhoso e passeios únicos.</span>
+          </div>
+          <div class="review">
+            <div class="user"><img src="https://i.pinimg.com/736x/65/84/23/6584236022b80246dd3bc013cd9138e7.jpg" alt="" /><div><div><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><strong>Lucas P.</strong></div></div><span>Noronha é incrível, recomendo muito esse pacote, tudo perfeito!</span>
+          </div>
+          <span class="see-more">Ver mais avaliações</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./assets/product.js"></script>
+</body>
+</html>
